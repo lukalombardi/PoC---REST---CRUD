@@ -1,0 +1,11 @@
+services:
+  api:
+    build:
+      target: dev
+
+    command: npx nodemon -L src/index.js
+    environment:
+      NODE_ENV: development
+    volumes:
+      - .:/app
+      - /app/node_modules
